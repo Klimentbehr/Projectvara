@@ -1,16 +1,14 @@
 ﻿using Main;
 using System;
-using System.Threading.Tasks; // Ensure this is included for async Task support
+using System.Threading.Tasks;
+using Vara_engine_main; // Assuming FoodItemGeneration class is in this namespace
 
 namespace NPCGenerator
 {
     class EntryPoint
     {
-        static async Task Main(string[] args) // Ensure Main is async to allow await
+        static async Task Main(string[] args)
         {
-            // Increase the console window size
-            //Console.SetWindowSize(Console.WindowWidth * 2, Console.WindowHeight * 2);
-
             bool exit = false;
             while (!exit)
             {
@@ -18,23 +16,22 @@ namespace NPCGenerator
                 Console.WriteLine(" __      __                                                _   _                               _         __      __        ___   ___  \r\n \\ \\    / /                                               | | (_)                             (_)        \\ \\    / /       / _ \\ / _ \\ \r\n  \\ \\  / /_ _ _ __ __ _     __ _  ___ _ __   ___ _ __ __ _| |_ _  ___  _ __    ___ _ __   __ _ _ _ __   __\\ \\  / /__ _ __| | | | | | |\r\n   \\ \\/ / _` | '__/ _` |   / _` |/ _ \\ '_ \\ / _ \\ '__/ _` | __| |/ _ \\| '_ \\  / _ \\ '_ \\ / _` | | '_ \\ / _ \\ \\/ / _ \\ '__| | | | | | |\r\n    \\  / (_| | | | (_| |  | (_| |  __/ | | |  __/ | | (_| | |_| | (_) | | | ||  __/ | | | (_| | | | | |  __/\\  /  __/ |  | |_| | |_| |\r\n     \\/ \\__,_|_|  \\__,_|   \\__, |\\___|_| |_|\\___|_|  \\__,_|\\__|_|\\___/|_| |_| \\___|_| |_|\\__, |_|_| |_|\\___| \\/ \\___|_|   \\___(_)___/ \r\n                     ______ __/ |                                         ______          __/ |          ______     ______            \r\n                    |______|___/                                         |______|        |___/          |______|   |______|           ");
                 Console.WriteLine("1. Generate NPCs");
                 Console.WriteLine("2. Generate Guns");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Generate Food Items");
+                Console.WriteLine("4. Exit");
                 Console.Write("Please choose an option: ");
 
                 string choice = Console.ReadLine();
                 switch (choice)
                 {
                     case "1":
-                        // Ensure Program.RunNPCGenerator() exists and is compatible with async/await or remove await if it's synchronous
                         await Program.RunNPCGenerator();
                         break;
                     case "2":
-                        // Prompt for the number of guns to generate
                         Console.Write("Enter the number of guns to generate: ");
                         if (int.TryParse(Console.ReadLine(), out int numberOfGuns) && numberOfGuns > 0)
                         {
                             GunGeneration gunGeneration = new GunGeneration();
-                            await gunGeneration.GenerateAndSaveRandomGuns(numberOfGuns); // Use the user-specified number
+                            await gunGeneration.GenerateAndSaveRandomGuns(numberOfGuns);
                             Console.WriteLine($"{numberOfGuns} guns have been generated and saved.");
                         }
                         else
@@ -43,11 +40,24 @@ namespace NPCGenerator
                         }
                         break;
                     case "3":
-                        exit = true;
+                        Console.Write("Enter the path to the food items file: ");
+                        string foodItemsFilePath = Console.ReadLine();
+                        string[] foodItemsFileLines = File.ReadAllLines(foodItemsFilePath);
+                        var foodItems = FoodItemGeneration.GenerateFoodItems(foodItemsFileLines);
+                        // Output generated food items
+                        foreach (var foodItem in foodItems)
+                        {
+                            Console.WriteLine($"Name: {foodItem.Name}");
+                            Console.WriteLine($"Health Regain: {foodItem.HealthRegain}");
+                            Console.WriteLine("Stat Bonuses:");
+                            foreach (var statBonus in foodItem.StatBonuses)
+                            {
+                                Console.WriteLine($"{statBonus.Key}: +{statBonus.Value}");
+                            }
+                            Console.WriteLine();
+                        }
                         break;
-                    default:
-                        Console.WriteLine("Invalid option. Please try again.");
-                        break;
+
                 }
 
                 if (!exit)

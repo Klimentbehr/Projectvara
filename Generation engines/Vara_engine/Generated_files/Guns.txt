@@ -1,402 +1,233 @@
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: First-rate Stock
-Grip: Superior Grip
-Trigger: Poor Trigger
-Damage: 45
-Accuracy: 80
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Poor Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: First-rate Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 45
-Accuracy: 70
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: First-rate Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: First-rate Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 90
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 50
-Accuracy: 90
-
 Name: M16A4
 Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Superior Stock
-Grip: Superior Grip
-Trigger: Poor Trigger
-Damage: 60
-Accuracy: 70
-
-Name: M4A1
-Origin: NATO
 Ammo Type: 7.62x51mm NATO
-Upper Receiver: First-rate Upper Receiver
+Upper Receiver: Superior Upper Receiver
 Barrel: First-rate Barrel
 Lower Receiver: Poor Lower Receiver
 Buffer Tube: Poor Buffer Tube
-Stock: Poor Stock
+Stock: Superior Stock
 Grip: Standard Grip
-Trigger: Standard Trigger
-Damage: 60
-Accuracy: 85
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: Poor Grip
-Trigger: Standard Trigger
-Damage: 60
-Accuracy: 70
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Standard Stock
-Grip: Standard Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 70
+Trigger: Poor Trigger
+Damage: 55
+Accuracy: 80
 
 Name: RPD
 Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: First-rate Upper Receiver
+Ammo Type: 7.62x39mm
+Upper Receiver: Standard Upper Receiver
 Barrel: Standard Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: First-rate Stock
+Grip: Standard Grip
 Trigger: Standard Trigger
-Damage: 60
+Damage: 50
 Accuracy: 75
 
+Name: M4A1
+Origin: NATO
+Ammo Type: 7.62x51mm NATO
+Upper Receiver: Poor Upper Receiver
+Barrel: Standard Barrel
+Lower Receiver: First-rate Lower Receiver
+Buffer Tube: First-rate Buffer Tube
+Stock: First-rate Stock
+Grip: Poor Grip
+Trigger: First-rate Trigger
+Damage: 45
+Accuracy: 85
+
+Name: M4A1
+Origin: NATO
+Ammo Type: 5.56x45mm NATO
+Upper Receiver: Superior Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: Standard Buffer Tube
+Stock: First-rate Stock
+Grip: First-rate Grip
+Trigger: Standard Trigger
+Damage: 55
+Accuracy: 70
+
 Name: SKS
 Origin: WarsawPact
 Ammo Type: 5.45x39mm
 Upper Receiver: Superior Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Standard Lower Receiver
+Buffer Tube: Standard Buffer Tube
+Stock: First-rate Stock
+Grip: Standard Grip
+Trigger: Superior Trigger
+Damage: 55
+Accuracy: 75
+
+Name: M16A4
+Origin: NATO
+Ammo Type: 7.62x51mm NATO
+Upper Receiver: First-rate Upper Receiver
+Barrel: Superior Barrel
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: Standard Buffer Tube
+Stock: Standard Stock
+Grip: First-rate Grip
+Trigger: Superior Trigger
+Damage: 60
+Accuracy: 85
+
+Name: RPD
+Origin: WarsawPact
+Ammo Type: 7.62x54mmR
+Upper Receiver: Standard Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Superior Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: First-rate Stock
+Grip: Standard Grip
+Trigger: Superior Trigger
+Damage: 50
+Accuracy: 75
+
+Name: M16A4
+Origin: NATO
+Ammo Type: 5.56x45mm NATO
+Upper Receiver: Poor Upper Receiver
+Barrel: Standard Barrel
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: Poor Buffer Tube
+Stock: Poor Stock
+Grip: First-rate Grip
+Trigger: Poor Trigger
+Damage: 45
+Accuracy: 70
+
+Name: RPD
+Origin: WarsawPact
+Ammo Type: 7.62x54mmR
+Upper Receiver: Poor Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Superior Lower Receiver
+Buffer Tube: Poor Buffer Tube
+Stock: Standard Stock
+Grip: Superior Grip
+Trigger: Standard Trigger
+Damage: 45
+Accuracy: 70
+
+Name: AK-47
+Origin: WarsawPact
+Ammo Type: 5.45x39mm
+Upper Receiver: Standard Upper Receiver
+Barrel: Standard Barrel
+Lower Receiver: Standard Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: Superior Stock
+Grip: Superior Grip
+Trigger: Superior Trigger
+Damage: 50
+Accuracy: 80
+
+Name: M16A4
+Origin: NATO
+Ammo Type: 9mm NATO
+Upper Receiver: First-rate Upper Receiver
+Barrel: First-rate Barrel
+Lower Receiver: Superior Lower Receiver
+Buffer Tube: Standard Buffer Tube
+Stock: First-rate Stock
+Grip: Standard Grip
+Trigger: Superior Trigger
+Damage: 60
+Accuracy: 90
+
+Name: FN SCAR
+Origin: NATO
+Ammo Type: 9mm NATO
+Upper Receiver: Poor Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: First-rate Buffer Tube
+Stock: Poor Stock
+Grip: First-rate Grip
+Trigger: First-rate Trigger
+Damage: 45
+Accuracy: 80
+
+Name: M16A4
+Origin: NATO
+Ammo Type: 7.62x51mm NATO
+Upper Receiver: Poor Upper Receiver
+Barrel: First-rate Barrel
+Lower Receiver: Standard Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: First-rate Stock
+Grip: Superior Grip
+Trigger: First-rate Trigger
+Damage: 45
+Accuracy: 95
+
+Name: AK-47
+Origin: WarsawPact
+Ammo Type: 7.62x39mm
+Upper Receiver: Standard Upper Receiver
 Barrel: Poor Barrel
 Lower Receiver: First-rate Lower Receiver
 Buffer Tube: Standard Buffer Tube
 Stock: Standard Stock
 Grip: First-rate Grip
 Trigger: First-rate Trigger
-Damage: 55
-Accuracy: 80
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: First-rate Stock
-Grip: Standard Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 70
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 55
-Accuracy: 80
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Poor Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 45
-Accuracy: 95
-
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Superior Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Standard Stock
-Grip: Standard Grip
-Trigger: Poor Trigger
-Damage: 55
-Accuracy: 70
-
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Poor Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Standard Stock
-Grip: Poor Grip
-Trigger: First-rate Trigger
-Damage: 45
-Accuracy: 80
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Superior Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: First-rate Stock
-Grip: Poor Grip
-Trigger: First-rate Trigger
-Damage: 55
-Accuracy: 80
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Poor Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: First-rate Stock
-Grip: Poor Grip
-Trigger: Superior Trigger
-Damage: 45
-Accuracy: 80
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Poor Stock
-Grip: Standard Grip
-Trigger: Standard Trigger
-Damage: 60
-Accuracy: 85
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 55
-Accuracy: 80
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: First-rate Stock
-Grip: Poor Grip
-Trigger: First-rate Trigger
 Damage: 50
 Accuracy: 80
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Poor Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: Poor Trigger
-Damage: 45
-Accuracy: 70
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 50
-Accuracy: 90
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: First-rate Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 60
-Accuracy: 95
 
 Name: M16A4
 Origin: NATO
 Ammo Type: 9mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Superior Stock
+Upper Receiver: Poor Upper Receiver
+Barrel: Superior Barrel
+Lower Receiver: First-rate Lower Receiver
+Buffer Tube: Poor Buffer Tube
+Stock: Standard Stock
 Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 80
+Trigger: Poor Trigger
+Damage: 45
+Accuracy: 75
 
 Name: AK-47
 Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: First-rate Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Standard Buffer Tube
+Ammo Type: 5.45x39mm
+Upper Receiver: Standard Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Standard Lower Receiver
+Buffer Tube: First-rate Buffer Tube
 Stock: Standard Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 60
-Accuracy: 85
+Grip: First-rate Grip
+Trigger: Standard Trigger
+Damage: 50
+Accuracy: 70
 
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
+Name: SKS
+Origin: WarsawPact
+Ammo Type: 5.45x39mm
 Upper Receiver: Standard Upper Receiver
 Barrel: Superior Barrel
 Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: First-rate Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 80
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 80
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Superior Buffer Tube
+Buffer Tube: First-rate Buffer Tube
 Stock: Poor Stock
 Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 80
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Superior Stock
-Grip: Standard Grip
 Trigger: Standard Trigger
 Damage: 50
-Accuracy: 85
+Accuracy: 80
 
 Name: SKS
 Origin: WarsawPact
 Ammo Type: 7.62x54mmR
-Upper Receiver: Poor Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 45
-Accuracy: 85
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
 Upper Receiver: First-rate Upper Receiver
 Barrel: Poor Barrel
 Lower Receiver: First-rate Lower Receiver
 Buffer Tube: Poor Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
+Stock: Superior Stock
+Grip: First-rate Grip
 Trigger: Poor Trigger
 Damage: 60
 Accuracy: 65
@@ -404,247 +235,91 @@ Accuracy: 65
 Name: FN SCAR
 Origin: NATO
 Ammo Type: 7.62x51mm NATO
-Upper Receiver: Poor Upper Receiver
+Upper Receiver: First-rate Upper Receiver
+Barrel: Superior Barrel
+Lower Receiver: First-rate Lower Receiver
+Buffer Tube: Poor Buffer Tube
+Stock: First-rate Stock
+Grip: Superior Grip
+Trigger: Superior Trigger
+Damage: 60
+Accuracy: 85
+
+Name: SKS
+Origin: WarsawPact
+Ammo Type: 7.62x54mmR
+Upper Receiver: First-rate Upper Receiver
+Barrel: Poor Barrel
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: Poor Stock
+Grip: Superior Grip
+Trigger: Superior Trigger
+Damage: 60
+Accuracy: 75
+
+Name: SKS
+Origin: WarsawPact
+Ammo Type: 7.62x54mmR
+Upper Receiver: Standard Upper Receiver
+Barrel: First-rate Barrel
+Lower Receiver: Poor Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: Poor Stock
+Grip: Superior Grip
+Trigger: Standard Trigger
+Damage: 50
+Accuracy: 85
+
+Name: FN SCAR
+Origin: NATO
+Ammo Type: 9mm NATO
+Upper Receiver: Standard Upper Receiver
+Barrel: Superior Barrel
+Lower Receiver: Standard Lower Receiver
+Buffer Tube: Superior Buffer Tube
+Stock: Poor Stock
+Grip: Superior Grip
+Trigger: Poor Trigger
+Damage: 50
+Accuracy: 75
+
+Name: M4A1
+Origin: NATO
+Ammo Type: 9mm NATO
+Upper Receiver: Superior Upper Receiver
 Barrel: Standard Barrel
+Lower Receiver: First-rate Lower Receiver
+Buffer Tube: Poor Buffer Tube
+Stock: Superior Stock
+Grip: Poor Grip
+Trigger: First-rate Trigger
+Damage: 55
+Accuracy: 85
+
+Name: SKS
+Origin: WarsawPact
+Ammo Type: 7.62x54mmR
+Upper Receiver: Superior Upper Receiver
+Barrel: First-rate Barrel
+Lower Receiver: First-rate Lower Receiver
+Buffer Tube: First-rate Buffer Tube
+Stock: Superior Stock
+Grip: Superior Grip
+Trigger: Standard Trigger
+Damage: 55
+Accuracy: 85
+
+Name: FN SCAR
+Origin: NATO
+Ammo Type: 9mm NATO
+Upper Receiver: Poor Upper Receiver
+Barrel: Poor Barrel
 Lower Receiver: Superior Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: First-rate Stock
-Grip: First-rate Grip
-Trigger: Poor Trigger
-Damage: 45
-Accuracy: 70
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Standard Stock
-Grip: Poor Grip
-Trigger: Superior Trigger
-Damage: 50
-Accuracy: 85
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Superior Stock
-Grip: Standard Grip
-Trigger: First-rate Trigger
-Damage: 50
-Accuracy: 85
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: First-rate Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Superior Stock
-Grip: Standard Grip
-Trigger: First-rate Trigger
-Damage: 60
-Accuracy: 85
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: Standard Grip
-Trigger: Poor Trigger
-Damage: 55
-Accuracy: 70
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Superior Stock
-Grip: Standard Grip
-Trigger: Superior Trigger
-Damage: 45
-Accuracy: 85
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Poor Lower Receiver
 Buffer Tube: First-rate Buffer Tube
 Stock: Standard Stock
 Grip: Standard Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 85
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Standard Stock
-Grip: Poor Grip
-Trigger: Standard Trigger
-Damage: 60
-Accuracy: 80
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Superior Stock
-Grip: Standard Grip
-Trigger: First-rate Trigger
-Damage: 45
-Accuracy: 90
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Superior Stock
-Grip: First-rate Grip
-Trigger: Superior Trigger
-Damage: 50
-Accuracy: 85
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Poor Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 45
-Accuracy: 80
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Superior Stock
-Grip: First-rate Grip
-Trigger: First-rate Trigger
-Damage: 55
-Accuracy: 95
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
 Trigger: Poor Trigger
-Damage: 55
+Damage: 45
 Accuracy: 65
-
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Poor Stock
-Grip: First-rate Grip
-Trigger: Superior Trigger
-Damage: 50
-Accuracy: 75
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: First-rate Stock
-Grip: First-rate Grip
-Trigger: Poor Trigger
-Damage: 50
-Accuracy: 70
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Superior Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 55
-Accuracy: 85
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Superior Stock
-Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 45
-Accuracy: 85
-
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Standard Stock
-Grip: Standard Grip
-Trigger: Superior Trigger
-Damage: 50
-Accuracy: 75
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Standard Stock
-Grip: First-rate Grip
-Trigger: Standard Trigger
-Damage: 55
-Accuracy: 80
 
