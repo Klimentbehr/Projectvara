@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NPCGenerator
 {
     public class Program
     {
-        public static List<string> familyNames = new List<string> { "Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson" };
-        public static NameGenerator nameGenerator = new NameGenerator();
-        public static Random random = new Random();
+        public static List<string> familyNames;
+        public static NameGenerator nameGenerator;
+        public static List<NPC> deadNPCs = new List<NPC>();
 
         public static async Task RunNPCGenerator()
         {
@@ -20,36 +21,133 @@ namespace NPCGenerator
                 return;
             }
 
+            // Initialize familyNames list
+            familyNames = LoadFamilyNamesFromFile(@"E:\Projectvara\Generation engines\Vara_engine\Generation_engine_REQUIRED_files\last_names.txt");
+
+            nameGenerator = new NameGenerator(@"E:\Projectvara\Generation engines\Vara_engine\Generation_engine_REQUIRED_files\first_names.txt", @"E:\Projectvara\Generation engines\Vara_engine\Generation_engine_REQUIRED_files\last_names.txt");
+
             List<NPC> allNPCs = new List<NPC>();
-            for (int i = 0; i < 2; i++) // Starting with 2 NPCs
+            List<NPC> currentGeneration = new List<NPC>();
+
+            // Starting with 20 families, each with 1 NPC
+            for (int i = 0; i < 20; i++)
             {
-                allNPCs.Add(nameGenerator.GenerateRandomNPC(true)); // true indicates max stats
+                NPC npc = nameGenerator.GenerateRandomNPC(true); // true indicates max stats
+                npc.FamilyName = GetRandomFamilyName();
+                allNPCs.Add(npc);
+                currentGeneration.Add(npc);
             }
 
             for (int gen = 0; gen < generations; gen++)
             {
                 List<NPC> nextGeneration = new List<NPC>();
-                foreach (var npc in allNPCs)
+
+                // Age the current NPCs that are not part of the new generation
+                foreach (var npc in allNPCs.Where(n => !currentGeneration.Contains(n)))
                 {
-                    nextGeneration.AddRange(npc.GenerateChildren(nameGenerator, random));
+                    npc.Stats.Age += 45; // Aging by 45 years
+                    if (npc.Stats.Age >= 200)
+                    {
+                        deadNPCs.Add(npc);
+                    }
+                    else if (npc.Stats.Age >= 25) // NPC starts a family
+                    {
+                        for (int i = 0; i < new Random().Next(1, 11); i++) // Each family can have 1-10 offspring
+                        {
+                            NPC childNPC = GenerateChildNPC(npc);
+                            nextGeneration.Add(childNPC);
+                        }
+                    }
                 }
+
+                foreach (var npc in currentGeneration)
+                {
+                    // Determine if NPC can reproduce
+                    if (npc.Stats.Age >= 18 && npc.Stats.Age <= 50) // Assuming reproductive age range
+                    {
+                        int childrenCount = new Random().Next(1, 11); // Randomly generate offspring count between 1 and 10
+
+                        for (int childIndex = 0; childIndex < childrenCount; childIndex++)
+                        {
+                            Stats childStats = new Stats(
+                                Math.Max(0, npc.Stats.Health + new Random().Next(-20, 21)),
+                                Math.Max(0, npc.Stats.Dexterity + new Random().Next(-20, 21)),
+                                Math.Max(0, npc.Stats.Intelligence + new Random().Next(-20, 21)),
+                                Math.Max(0, npc.Stats.Wisdom + new Random().Next(-20, 21)),
+                                Math.Max(0, npc.Stats.Charisma + new Random().Next(-20, 21)),
+                                Math.Max(0, npc.Stats.Strength + new Random().Next(-20, 21)),
+                                1 // Child age starts at 1
+                            );
+
+                            NPC childNPC = new NPC(nameGenerator.GenerateFullName(), childStats, npc.Gender, npc.FamilyName, npc.Role);
+                            nextGeneration.Add(childNPC);
+                        }
+                    }
+                }
+
+                currentGeneration.Clear();
+                currentGeneration.AddRange(nextGeneration);
                 allNPCs.AddRange(nextGeneration);
             }
 
-            await SaveNPCsToFile(allNPCs, "NPCs.txt");
-            Console.WriteLine($"{allNPCs.Count} NPCs have been generated across {generations} generations and saved to NPCs.txt");
+            // Save dead NPCs to a file
+            await SaveNPCsToFile(deadNPCs, "Dead_NPCs.txt");
+            Console.WriteLine($"{deadNPCs.Count} NPCs have died during the simulation and saved to Dead_NPCs.txt");
+
+            // Save all NPCs to a file
+            await SaveNPCsToFile(allNPCs, "All_NPCs.txt");
+            Console.WriteLine($"{allNPCs.Count} NPCs have been generated across {generations} generations and saved to All_NPCs.txt");
         }
 
-        static async Task SaveNPCsToFile(List<NPC> npcs, string filePath)
+        private static NPC GenerateChildNPC(NPC parent)
+        {
+            Stats childStats = new Stats(
+                Math.Max(0, parent.Stats.Health + new Random().Next(-20, 21)),
+                Math.Max(0, parent.Stats.Dexterity + new Random().Next(-20, 21)),
+                Math.Max(0, parent.Stats.Intelligence + new Random().Next(-20, 21)),
+                Math.Max(0, parent.Stats.Wisdom + new Random().Next(-20, 21)),
+                Math.Max(0, parent.Stats.Charisma + new Random().Next(-20, 21)),
+                Math.Max(0, parent.Stats.Strength + new Random().Next(-20, 21)),
+                1 // Child age starts at 1
+            );
+
+            return new NPC(nameGenerator.GenerateFullName(), childStats, parent.Gender, parent.FamilyName, parent.Role);
+        }
+
+        private static List<string> LoadFamilyNamesFromFile(string fileName)
+        {
+            List<string> names = new List<string>();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(fileName);
+                names.AddRange(lines);
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine($"Error reading family names from file: {e.Message}");
+            }
+
+            return names;
+        }
+
+        private static string GetRandomFamilyName()
+        {
+            return familyNames[new Random().Next(0, familyNames.Count)];
+        }
+
+        private static async Task SaveNPCsToFile(List<NPC> npcs, string fileName)
         {
             string directoryPath = @"E:\Projectvara\Generation engines\Vara_engine\Generated_files\";
             Directory.CreateDirectory(directoryPath); // Ensure directory exists
-            string fullPath = Path.Combine(directoryPath, filePath);
+            string fullPath = Path.Combine(directoryPath, fileName);
 
-            using StreamWriter file = new StreamWriter(fullPath);
-            foreach (var npc in npcs)
+            using (StreamWriter writer = new StreamWriter(fullPath))
             {
-                await file.WriteLineAsync(npc.ToString());
+                foreach (var npc in npcs)
+                {
+                    await writer.WriteLineAsync(npc.ToString());
+                }
             }
         }
     }
@@ -57,16 +155,31 @@ namespace NPCGenerator
     public class NameGenerator
     {
         private Random random = new Random();
-        private List<string> firstNames = new List<string>
+        private List<string> firstNames = new List<string>();
+        private List<string> lastNames = new List<string>();
+
+        public NameGenerator(string firstNamesFilePath, string lastNamesFilePath)
         {
-            "Emma", "Liam", "Olivia", "Noah", "Ava", "William", "Sophia", "James", "Isabella", "Logan",
-            "Charlotte", "Benjamin", "Mia", "Elijah", "Amelia", "Oliver", "Harper", "Jacob", "Evelyn", "Lucas"
-        };
-        private List<string> lastNames = new List<string>
+            LoadNamesFromFile(firstNamesFilePath, firstNames);
+            LoadNamesFromFile(lastNamesFilePath, lastNames);
+        }
+
+        private void LoadNamesFromFile(string filePath, List<string> namesList)
         {
-            "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez",
-            "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin"
-        };
+            try
+            {
+                string[] names = File.ReadAllLines(filePath);
+                namesList.AddRange(names);
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"File not found: {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while reading file: {ex.Message}");
+            }
+        }
 
         public string GenerateFullName()
         {
@@ -82,17 +195,18 @@ namespace NPCGenerator
                 new Stats(random.Next(100), random.Next(100), random.Next(100), random.Next(100), random.Next(100), random.Next(100), random.Next(1, 101));
             Gender gender = (Gender)random.Next(2);
             Role role = GetRandomRoleByRarity(); // Use a method to get a role based on rarity
-            string familyName = lastNames[random.Next(lastNames.Count)];
+            string familyName = Program.familyNames[random.Next(Program.familyNames.Count)]; // Use familyNames list from Program class
             return new NPC(fullName, stats, gender, familyName, role);
         }
+
         private Role GetRandomRoleByRarity()
         {
             int randomNumber = random.Next(100); // Generate a number between 0 and 99
-            if (randomNumber < 5) // 5% chance for Leadership
+            if (randomNumber < 1) // 5% chance for Leadership
             {
                 return Role.Leadership;
             }
-            else if (randomNumber < 25) // 20% chance for Warrior, since it's uncommon
+            else if (randomNumber < 29) // 20% chance for Warrior, since it's uncommon
             {
                 return Role.Warrior;
             }
@@ -118,26 +232,6 @@ namespace NPCGenerator
             Gender = gender;
             FamilyName = familyName;
             Role = role;
-        }
-
-        public List<NPC> GenerateChildren(NameGenerator nameGenerator, Random random)
-        {
-            int childrenCount = random.Next(1, 4); // Each NPC can have 1 to 3 children
-            List<NPC> children = new List<NPC>();
-            for (int i = 0; i < childrenCount; i++)
-            {
-                Stats childStats = new Stats(
-                    Math.Max(0, Stats.Health + random.Next(-20, 21)),
-                    Math.Max(0, Stats.Dexterity + random.Next(-20, 21)),
-                    Math.Max(0, Stats.Intelligence + random.Next(-20, 21)),
-                    Math.Max(0, Stats.Wisdom + random.Next(-20, 21)),
-                    Math.Max(0, Stats.Charisma + random.Next(-20, 21)),
-                    Math.Max(0, Stats.Strength + random.Next(-20, 21)),
-                    random.Next(1, 101) // Child age is randomly generated
-                );
-                children.Add(new NPC(nameGenerator.GenerateFullName(), childStats, Gender, FamilyName, (Role)random.Next(Enum.GetNames(typeof(Role)).Length))); // Assign random role to children
-            }
-            return children;
         }
 
         public override string ToString()
