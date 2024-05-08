@@ -1,7 +1,7 @@
 ﻿using Main;
 using System;
 using System.Threading.Tasks;
-using Vara_engine_main; // Assuming FoodItemGeneration class is in this namespace
+using Vara_engine_main; 
 
 namespace NPCGenerator
 {
@@ -62,9 +62,9 @@ namespace NPCGenerator
 
                 if (!exit)
                 {
-                    Console.WriteLine(); // Add a new line for better readability
+                    Console.WriteLine(); 
                     Console.WriteLine("Press any key to continue...");
-                    Console.ReadKey(); // Wait for user input before clearing the screen
+                    Console.ReadKey(); 
                 }
             }
         }

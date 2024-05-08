@@ -12,19 +12,13 @@ namespace Main
 
         public enum GunOrigin
         {
-            WarsawPact,
-            NATO
+            Civilian,
+            Military
         }
-
-        private Dictionary<GunOrigin, List<string>> ammoTypes = new Dictionary<GunOrigin, List<string>>
-        {
-            { GunOrigin.WarsawPact, new List<string> { "7.62x39mm", "7.62x54mmR", "5.45x39mm" } },
-            { GunOrigin.NATO, new List<string> { "5.56x45mm NATO", "7.62x51mm NATO", "9mm NATO" } }
-        };
 
         public class Gun
         {
-            public string Name { get; set; }
+            public string ID { get; set; }
             public GunOrigin Origin { get; set; }
             public string UpperReceiver { get; set; }
             public string Barrel { get; set; }
@@ -33,18 +27,16 @@ namespace Main
             public string Stock { get; set; }
             public string Grip { get; set; }
             public string Trigger { get; set; }
-            public string AmmoType { get; set; }
             public int Damage { get; set; }
             public int Accuracy { get; set; }
 
-            public Gun(string name, GunOrigin origin, string ammoType,
+            public Gun(string id, GunOrigin origin,
                 string upperReceiver, string barrel, string lowerReceiver,
                 string bufferTube, string stock, string grip, string trigger,
                 int damage, int accuracy)
             {
-                Name = name;
+                ID = id;
                 Origin = origin;
-                AmmoType = ammoType;
                 UpperReceiver = upperReceiver;
                 Barrel = barrel;
                 LowerReceiver = lowerReceiver;
@@ -58,9 +50,8 @@ namespace Main
 
             public override string ToString()
             {
-                return $"Name: {Name}\n" +
+                return $"ID: {ID}\n" +
                        $"Origin: {Origin}\n" +
-                       $"Ammo Type: {AmmoType}\n" +
                        $"Upper Receiver: {UpperReceiver}\n" +
                        $"Barrel: {Barrel}\n" +
                        $"Lower Receiver: {LowerReceiver}\n" +
@@ -73,8 +64,10 @@ namespace Main
             }
         }
 
-        private List<string> warsawPactGuns = new List<string> { "AK-47", "SKS", "RPD" };
-        private List<string> natoGuns = new List<string> { "M16A4", "FN SCAR", "M4A1" };
+        private string GeneratePartID()
+        {
+            return Guid.NewGuid().ToString().Substring(0, 8);
+        }
 
         private string SelectQualityDescriptor()
         {
@@ -82,7 +75,6 @@ namespace Main
             int index = random.Next(qualityDescriptors.Count);
             return qualityDescriptors[index];
         }
-
 
         private int DetermineStatBonus(string qualityDescriptor)
         {
@@ -99,34 +91,29 @@ namespace Main
         public Gun GenerateRandomGun()
         {
             GunOrigin origin = (GunOrigin)random.Next(2);
-            string name = origin == GunOrigin.WarsawPact ? warsawPactGuns[random.Next(warsawPactGuns.Count)] : natoGuns[random.Next(natoGuns.Count)];
-            string ammoType = ammoTypes[origin][random.Next(ammoTypes[origin].Count)];
+            string id = "Gun" + GeneratePartID();
 
-            // Select quality descriptors directly
-            string upperReceiverQuality = SelectQualityDescriptor();
-            string barrelQuality = SelectQualityDescriptor();
-            string triggerQuality = SelectQualityDescriptor();
+            // Generate parts with IDs and qualities
+            string upperReceiver = GeneratePartID() + "." + SelectQualityDescriptor();
+            string barrel = GeneratePartID() + "." + SelectQualityDescriptor();
+            string trigger = GeneratePartID() + "." + SelectQualityDescriptor();
 
             // Apply stat bonuses based on quality
-            int damage = 50 + DetermineStatBonus(upperReceiverQuality); // Example base damage
-            int accuracy = 75 + DetermineStatBonus(barrelQuality) + DetermineStatBonus(triggerQuality); // Example base accuracy
+            int damage = 50 + DetermineStatBonus(SelectQualityDescriptor()); // Example base damage
+            int accuracy = 75 + DetermineStatBonus(SelectQualityDescriptor()); // Example base accuracy
 
-            // Combine quality descriptors with part names for display
-            string upperReceiver = $"{upperReceiverQuality} Upper Receiver";
-            string barrel = $"{barrelQuality} Barrel";
-            string trigger = $"{triggerQuality} Trigger";
-
-            return new Gun(name, origin, ammoType,
+            return new Gun(id, origin,
                 upperReceiver,
                 barrel,
-                SelectQualityDescriptor() + " Lower Receiver",
-                SelectQualityDescriptor() + " Buffer Tube",
-                SelectQualityDescriptor() + " Stock",
-                SelectQualityDescriptor() + " Grip",
+                GeneratePartID() + "." + SelectQualityDescriptor(),
+                GeneratePartID() + "." + SelectQualityDescriptor(),
+                GeneratePartID() + "." + SelectQualityDescriptor(),
+                GeneratePartID() + "." + SelectQualityDescriptor(),
                 trigger,
                 damage,
                 accuracy);
         }
+
         public async Task GenerateAndSaveRandomGuns(int numberOfGuns)
         {
             List<Gun> guns = new List<Gun>();
@@ -141,7 +128,6 @@ namespace Main
         private async Task SaveGunsToFile(List<Gun> guns, string fileName)
         {
             string filePath = Path.Combine(directoryPath, fileName);
-
             Directory.CreateDirectory(directoryPath); // Ensure the directory exists
 
             using StreamWriter file = new StreamWriter(filePath);
