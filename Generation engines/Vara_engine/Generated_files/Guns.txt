@@ -1,325 +1,300 @@
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Superior Stock
-Grip: Standard Grip
-Trigger: Poor Trigger
-Damage: 55
+ID: Gunfaf96776
+Origin: Military
+Upper Receiver: aea70df4.First-rate
+Barrel: a85e3c31.Standard
+Lower Receiver: 0037cf35.Poor
+Buffer Tube: a5d326bb.Poor
+Stock: 290c9884.Poor
+Grip: 651aeb61.Poor
+Trigger: 04ca4403.First-rate
+Damage: 60
 Accuracy: 80
 
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: First-rate Stock
-Grip: Standard Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 75
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: First-rate Stock
-Grip: Poor Grip
-Trigger: First-rate Trigger
-Damage: 45
-Accuracy: 85
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: First-rate Stock
-Grip: First-rate Grip
-Trigger: Standard Trigger
-Damage: 55
-Accuracy: 70
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Superior Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: First-rate Stock
-Grip: Standard Grip
-Trigger: Superior Trigger
-Damage: 55
-Accuracy: 75
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Standard Stock
-Grip: First-rate Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 85
-
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: First-rate Stock
-Grip: Standard Grip
-Trigger: Superior Trigger
-Damage: 50
-Accuracy: 75
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 5.56x45mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Poor Stock
-Grip: First-rate Grip
-Trigger: Poor Trigger
+ID: Gun2cc59dba
+Origin: Civilian
+Upper Receiver: cf4a55d1.Poor
+Barrel: 037813b3.Poor
+Lower Receiver: a1880f7f.Standard
+Buffer Tube: 796e6d96.Poor
+Stock: 14f63a3c.Poor
+Grip: 7e619a9c.First-rate
+Trigger: e131bd9a.Poor
 Damage: 45
 Accuracy: 70
 
-Name: RPD
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Poor Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 45
+ID: Gunac69378e
+Origin: Military
+Upper Receiver: d79b98e1.Poor
+Barrel: 42ef6da2.Standard
+Lower Receiver: 63561af6.Standard
+Buffer Tube: b868da23.Poor
+Stock: 4275f336.First-rate
+Grip: 38de41bc.First-rate
+Trigger: 381aec84.First-rate
+Damage: 60
 Accuracy: 70
 
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Superior Stock
-Grip: Superior Grip
-Trigger: Superior Trigger
+ID: Gun5d4881f7
+Origin: Military
+Upper Receiver: 870f53b2.Poor
+Barrel: 6e7166b3.Standard
+Lower Receiver: 68c92ae6.Superior
+Buffer Tube: bbd195c4.Standard
+Stock: 9bbbeedc.Superior
+Grip: 7f4ed7d9.First-rate
+Trigger: caf1a809.First-rate
 Damage: 50
-Accuracy: 80
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: First-rate Stock
-Grip: Standard Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 90
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Poor Stock
-Grip: First-rate Grip
-Trigger: First-rate Trigger
-Damage: 45
-Accuracy: 80
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: First-rate Stock
-Grip: Superior Grip
-Trigger: First-rate Trigger
-Damage: 45
-Accuracy: 95
-
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 7.62x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Standard Buffer Tube
-Stock: Standard Stock
-Grip: First-rate Grip
-Trigger: First-rate Trigger
-Damage: 50
-Accuracy: 80
-
-Name: M16A4
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Standard Stock
-Grip: Superior Grip
-Trigger: Poor Trigger
-Damage: 45
 Accuracy: 75
 
-Name: AK-47
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Standard Stock
-Grip: First-rate Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 70
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 5.45x39mm
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 50
-Accuracy: 80
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: First-rate Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Superior Stock
-Grip: First-rate Grip
-Trigger: Poor Trigger
-Damage: 60
-Accuracy: 65
-
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 7.62x51mm NATO
-Upper Receiver: First-rate Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: First-rate Stock
-Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 85
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: First-rate Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: Superior Trigger
-Damage: 60
-Accuracy: 75
-
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Standard Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: Poor Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
+ID: Gunc364637f
+Origin: Civilian
+Upper Receiver: e1acb8e0.Superior
+Barrel: 0ba89aa1.First-rate
+Lower Receiver: 0c8d2ad6.Standard
+Buffer Tube: 8418dbaa.Superior
+Stock: d7d29cea.Standard
+Grip: 4cf86e33.First-rate
+Trigger: 3bfcb427.First-rate
 Damage: 50
 Accuracy: 85
 
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Standard Upper Receiver
-Barrel: Superior Barrel
-Lower Receiver: Standard Lower Receiver
-Buffer Tube: Superior Buffer Tube
-Stock: Poor Stock
-Grip: Superior Grip
-Trigger: Poor Trigger
-Damage: 50
-Accuracy: 75
-
-Name: M4A1
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Superior Upper Receiver
-Barrel: Standard Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: Poor Buffer Tube
-Stock: Superior Stock
-Grip: Poor Grip
-Trigger: First-rate Trigger
+ID: Gun8f4283b8
+Origin: Civilian
+Upper Receiver: 8eca8ac3.Standard
+Barrel: a982534e.Superior
+Lower Receiver: 08793cfa.Superior
+Buffer Tube: 201d915d.Standard
+Stock: 5bcacbe5.Standard
+Grip: ef56d574.Superior
+Trigger: 4d954ce7.First-rate
 Damage: 55
 Accuracy: 85
 
-Name: SKS
-Origin: WarsawPact
-Ammo Type: 7.62x54mmR
-Upper Receiver: Superior Upper Receiver
-Barrel: First-rate Barrel
-Lower Receiver: First-rate Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Superior Stock
-Grip: Superior Grip
-Trigger: Standard Trigger
-Damage: 55
+ID: Gun51844f5e
+Origin: Military
+Upper Receiver: 96447caa.Poor
+Barrel: cb9e47ca.Poor
+Lower Receiver: feec9d73.Standard
+Buffer Tube: 47910f75.First-rate
+Stock: 056ca27d.Standard
+Grip: fea7548e.First-rate
+Trigger: fcdf347a.First-rate
+Damage: 45
 Accuracy: 85
 
-Name: FN SCAR
-Origin: NATO
-Ammo Type: 9mm NATO
-Upper Receiver: Poor Upper Receiver
-Barrel: Poor Barrel
-Lower Receiver: Superior Lower Receiver
-Buffer Tube: First-rate Buffer Tube
-Stock: Standard Stock
-Grip: Standard Grip
-Trigger: Poor Trigger
+ID: Guncdbab9d6
+Origin: Military
+Upper Receiver: 315800ad.Poor
+Barrel: 8d0fd7b2.Standard
+Lower Receiver: 93360caa.Superior
+Buffer Tube: ff2c34fd.First-rate
+Stock: d528f77b.First-rate
+Grip: ecf21c46.Superior
+Trigger: 64f5f89f.Superior
+Damage: 60
+Accuracy: 75
+
+ID: Gun0583bdbe
+Origin: Military
+Upper Receiver: 67798b1c.Standard
+Barrel: 35ef6b95.Superior
+Lower Receiver: 60c4ba10.Superior
+Buffer Tube: e2d07f14.Standard
+Stock: 230fe4b4.Superior
+Grip: 070de096.First-rate
+Trigger: dea0d3a8.Poor
 Damage: 45
-Accuracy: 65
+Accuracy: 75
+
+ID: Gun6ed95d14
+Origin: Civilian
+Upper Receiver: 4f4f8197.First-rate
+Barrel: 33ce843a.Standard
+Lower Receiver: 8168ea7f.Superior
+Buffer Tube: 6a058fb3.Standard
+Stock: 3f4513e7.Poor
+Grip: 7e28657f.Superior
+Trigger: 520fd3a6.First-rate
+Damage: 55
+Accuracy: 75
+
+ID: Guned6745ec
+Origin: Civilian
+Upper Receiver: 2fc5d8c5.First-rate
+Barrel: f7da9491.Standard
+Lower Receiver: f9501a64.First-rate
+Buffer Tube: 962955fb.Superior
+Stock: 35f18d49.First-rate
+Grip: 2ba2336b.Standard
+Trigger: 05d0cdbd.Standard
+Damage: 60
+Accuracy: 75
+
+ID: Guncd667969
+Origin: Military
+Upper Receiver: 54852319.Standard
+Barrel: 25a019ff.Poor
+Lower Receiver: d64a8f04.Superior
+Buffer Tube: 6cc75672.Standard
+Stock: e0f24a27.Superior
+Grip: 87fca5ab.Superior
+Trigger: e9ac2b41.Poor
+Damage: 45
+Accuracy: 80
+
+ID: Gun76eb932f
+Origin: Military
+Upper Receiver: c0eacfef.Superior
+Barrel: f504f4c0.Superior
+Lower Receiver: 6f2028b3.Superior
+Buffer Tube: f2d1cca8.Superior
+Stock: d6af0d2b.First-rate
+Grip: 45f26460.Standard
+Trigger: 79fd8f8b.Standard
+Damage: 55
+Accuracy: 80
+
+ID: Gun6e41c1ac
+Origin: Civilian
+Upper Receiver: c00cfbd8.Poor
+Barrel: b7bfa898.First-rate
+Lower Receiver: 89b33387.Superior
+Buffer Tube: b790330a.Standard
+Stock: 62aea4e8.Superior
+Grip: df974966.Superior
+Trigger: e817c0f7.Superior
+Damage: 60
+Accuracy: 85
+
+ID: Gun212ecedc
+Origin: Military
+Upper Receiver: d789fc53.Superior
+Barrel: 9c2c13bf.Poor
+Lower Receiver: c49ba58c.Standard
+Buffer Tube: 307c5a7d.Poor
+Stock: 6d1359da.First-rate
+Grip: 7669b9fc.Standard
+Trigger: 75146425.Standard
+Damage: 60
+Accuracy: 80
+
+ID: Gune963adb5
+Origin: Civilian
+Upper Receiver: 3be78290.First-rate
+Barrel: 30b10c58.Standard
+Lower Receiver: 5c24f8ae.First-rate
+Buffer Tube: e06ce6ee.Superior
+Stock: 732f9d34.Standard
+Grip: 19cffeed.First-rate
+Trigger: 90afb5d1.Standard
+Damage: 50
+Accuracy: 85
+
+ID: Gun06ca551d
+Origin: Military
+Upper Receiver: 1886f91a.Standard
+Barrel: 3fb56050.Poor
+Lower Receiver: b1aa1554.Standard
+Buffer Tube: 77aed3c3.Superior
+Stock: d1243b52.Superior
+Grip: 30273dd0.Poor
+Trigger: 60e8e421.First-rate
+Damage: 50
+Accuracy: 70
+
+ID: Gunbf1e4ee7
+Origin: Civilian
+Upper Receiver: 7c41c322.First-rate
+Barrel: a2242123.First-rate
+Lower Receiver: feaad25a.Standard
+Buffer Tube: 21d949a0.Standard
+Stock: 389d2b2a.Poor
+Grip: 244209ff.First-rate
+Trigger: 88c57ad1.Poor
+Damage: 45
+Accuracy: 85
+
+ID: Gun79ca15bc
+Origin: Civilian
+Upper Receiver: 12eb7b61.Poor
+Barrel: 271f788b.First-rate
+Lower Receiver: 55709a74.Poor
+Buffer Tube: f95f2cf2.Superior
+Stock: e4dd7929.Superior
+Grip: e7bcf273.Poor
+Trigger: 59f8af4d.Superior
+Damage: 60
+Accuracy: 70
+
+ID: Gun72e6b875
+Origin: Civilian
+Upper Receiver: 6c46bb7c.Superior
+Barrel: cbc74de4.First-rate
+Lower Receiver: 577e91d8.First-rate
+Buffer Tube: 2bb6b158.Poor
+Stock: ef51c32c.Superior
+Grip: 4374f372.Standard
+Trigger: c5cb0f3c.Standard
+Damage: 45
+Accuracy: 85
+
+ID: Gun98b9d581
+Origin: Civilian
+Upper Receiver: ecf55fe0.Superior
+Barrel: a021f53b.Standard
+Lower Receiver: 46612cb0.Poor
+Buffer Tube: d7bca38e.First-rate
+Stock: 57855bc6.Superior
+Grip: 84b08ab6.First-rate
+Trigger: 2d5309f9.Poor
+Damage: 50
+Accuracy: 80
+
+ID: Gun70ec0f60
+Origin: Civilian
+Upper Receiver: 71d2c6e0.Standard
+Barrel: 14b0ec63.Superior
+Lower Receiver: c95a61fb.Poor
+Buffer Tube: 2ec33adc.Poor
+Stock: 0dffd6ab.Poor
+Grip: 819ed53e.Superior
+Trigger: 4587d544.Standard
+Damage: 50
+Accuracy: 80
+
+ID: Gun2f009fcf
+Origin: Civilian
+Upper Receiver: 68e8d797.Superior
+Barrel: 6cb4018c.Standard
+Lower Receiver: ccde0cc2.Poor
+Buffer Tube: 7e0d8ffd.Superior
+Stock: b440f029.Superior
+Grip: 14d04f7b.Standard
+Trigger: 5f335343.Superior
+Damage: 55
+Accuracy: 75
+
+ID: Gun3dd0bd71
+Origin: Civilian
+Upper Receiver: 1fad5e0e.Poor
+Barrel: 6a454fb1.Poor
+Lower Receiver: 38a8c483.Standard
+Buffer Tube: 08b036ee.First-rate
+Stock: 9ab951dd.Superior
+Grip: fea938d2.Superior
+Trigger: a21d2515.Superior
+Damage: 50
+Accuracy: 70
+
+ID: Gun82101b3b
+Origin: Military
+Upper Receiver: 512dbbed.Poor
+Barrel: caeb0386.Poor
+Lower Receiver: c0d8c21d.Superior
+Buffer Tube: 3d4bd9c2.Standard
+Stock: fdb9a058.First-rate
+Grip: 4040f348.Superior
+Trigger: b12a3d5c.Superior
+Damage: 45
+Accuracy: 70
 
