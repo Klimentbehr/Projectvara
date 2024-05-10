@@ -1,8 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using Main;
 using System;
-using System.IO;
 using System.Threading.Tasks;
-using System.Xml;
+using System.IO;
+using System.Collections.Generic;
+using System.Text.Json;
+using Vara_engine_main;
 
 namespace NPCGenerator
 {
@@ -11,6 +13,8 @@ namespace NPCGenerator
         static async Task Main(string[] args)
         {
             bool exit = false;
+            WorldGenerator generator = new WorldGenerator();
+
             while (!exit)
             {
                 Console.Clear();
@@ -25,42 +29,71 @@ namespace NPCGenerator
                 string choice = Console.ReadLine();
                 switch (choice)
                 {
+                    case "1":
+                        await Program.RunNPCGenerator();
+                        break;
+                    case "2":
+                        Console.Write("Enter the number of guns to generate: ");
+                        if (int.TryParse(Console.ReadLine(), out int numberOfGuns) && numberOfGuns > 0)
+                        {
+                            GunGeneration gunGeneration = new GunGeneration();
+                            await gunGeneration.GenerateAndSaveRandomGuns(numberOfGuns);
+                            Console.WriteLine($"{numberOfGuns} guns have been generated and saved.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid input. Please enter a positive integer.");
+                        }
+                        break;
+                    case "3":
+                        Console.Write("Enter the path to the food items file: ");
+                        string foodItemsFilePath = Console.ReadLine();
+                        string[] foodItemsFileLines = File.ReadAllLines(foodItemsFilePath);
+                        var foodItems = FoodItemGeneration.GenerateFoodItems(foodItemsFileLines);
+                        foreach (var foodItem in foodItems)
+                        {
+                            Console.WriteLine($"Name: {foodItem.Name}, Health Regain: {foodItem.HealthRegain}");
+                            Console.WriteLine("Stat Bonuses:");
+                            foreach (var statBonus in foodItem.StatBonuses)
+                            {
+                                Console.WriteLine($"{statBonus.Key}: +{statBonus.Value}");
+                            }
+                            Console.WriteLine();
+                        }
+                        break;
                     case "4":
-                        var generator = new WorldGenerator();
                         var planets = generator.GeneratePlanets(5);
                         var solarSystems = generator.GenerateSolarSystems(3);
+                        SaveWorldData(planets, "E:\\Projectvara\\Generation engines\\Vara_engine\\Generated_files\\Planets.json");
+                        SaveWorldData(solarSystems, "E:\\Projectvara\\Generation engines\\Vara_engine\\Generated_files\\SolarSystems.json");
                         Console.WriteLine("World generation complete.");
-
-                        // Serialize and save the generated data
-                        var filePath = "GeneratedWorld.json";
-                        SaveGeneratedData(planets, solarSystems, filePath);
-                        Console.WriteLine($"Data saved to {filePath}");
+                        Console.WriteLine($"Generated {planets.Count} planets and {solarSystems.Count} solar systems.");
                         break;
                     case "5":
                         exit = true;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid option, please try again.");
                         break;
                 }
 
                 if (!exit)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("Press any key to continue...");
                     Console.ReadKey();
                 }
             }
         }
 
-        static void SaveGeneratedData(List<Planet> planets, List<Hexagon> solarSystems, string filePath)
+        static void SaveWorldData<T>(List<T> data, string filePath)
         {
-            var data = new
+            string json = JsonSerializer.Serialize(data, new JsonSerializerOptions { WriteIndented = true });
+            // Ensure the directory exists
+            string directory = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directory))
             {
-                Planets = planets,
-                SolarSystems = solarSystems
-            };
-            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+                Directory.CreateDirectory(directory);
+            }
             File.WriteAllText(filePath, json);
+            Console.WriteLine($"Data saved to {filePath}");
         }
     }
 }
